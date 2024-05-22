@@ -1,5 +1,6 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { createSlice } from "@reduxjs/toolkit";
 import { RootState } from "../store";
+import { authenticate } from "../thunks/auth.thunk";
 
 export interface CounterState {
   value: number;
@@ -11,14 +12,7 @@ const initialState: CounterState = {
   user: ''
 }
 
-export const authenticate = createAsyncThunk(
-  'counter/authenticate',
-  async () => {
-    // const response = await fetch('')
-    // const result = await response.json();
-    return 'kjashdhjkfasd';
-  }
-)
+
 
 export const counterSlice = createSlice({
   name: 'counter',
